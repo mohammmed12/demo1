@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .conterner {
+        width: 90%;
+        background-color: #FFFFFF;
+
+        margin-left: 80px;
+    }
+
+    .Title {
+        color: brown;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+    .main{
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .add{
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="conterner">
+        
+        <h1 class="Title">Mangament</h1>
+        <div class="main">
+            <h1>Infomation</h1>
+            <table width="60%" border="1">
+                <tr>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>
+                        </td>Delete</th>
+                </tr>
+                {{# each sanPham}}
+                <tr>
+                    <td>{{Customer}}</td>
+                    <td>{{Product}}</td>
+                    <td>{{Price}}</td>
+                    <td>{{Quantity}}</td>
+                    <td>{{Total}}</td>
+                    <td><a href='/delete?id={{_id}}'>delete</a></td>
+                </tr>
+                {{/each}}
+            </table>
+            <br>
+            <button class="add"><a href='/add'>New Product</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

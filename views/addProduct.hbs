@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .conterner {
+        width: 50%;
+        background-color: #FFFFFF;
+        margin-left: 300px;
+    }
+
+    .Title {
+        color: brown;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    .main {
+        width: 90%;
+        text-align: center;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .add {
+        margin-left: 150px;
+        padding: 10px;
+    }
+    td{
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div class="conterner">
+        <div class="main">
+            <h1>Add information</h1>
+            <div class = "add">
+            <form action="doAddProduct" method="post">
+                <table>
+                    <tr>
+                        <td>Customer</td>
+                        <td><input type="text" name="txtCustomer" value="{{oldValue.Customer}}" </td>
+                    </tr>
+                    <tr>
+                        <td>Product</td>
+                        <td><input type="text" name="txtProduct" value="{{oldValue.Product}}" </td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td><input type="text" name="txtPrice" value="{{oldValue.Price}}" </td>
+                    </tr>
+                    <tr>
+                        <td>Quantity</td>
+                        <td><input type="number" name="txtQuantity" value="{{oldValue.Quantity}}" </td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td><input type="text" name="txtTotal" value="{{oldValue.Total}}" </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Add Product" </td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
